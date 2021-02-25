@@ -23,9 +23,6 @@ jobs:
 
     - name: Build with Maven
       run: ./mvnw package
-      
-    - name: Package Jar
-      run: java -jar target/*.jar
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -33,4 +30,4 @@ jobs:
         app-name: 'PetClinic-Java-SDK-tester'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d355766b5d1249f597cc27592ca07d5f }}
-        package: '${{ github.workspace }}/target/*.war'
+        package: '${{ github.workspace }}/target/classes.jar'
