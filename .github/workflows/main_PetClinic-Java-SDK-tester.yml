@@ -30,4 +30,4 @@ jobs:
         app-name: 'PetClinic-Java-SDK-tester'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d355766b5d1249f597cc27592ca07d5f }}
-        package: '${{ github.workspace }}/target/classes.jar'
+        package: '${{ github.workspace }}/target/spring-petclinic-2.4.2.jar
